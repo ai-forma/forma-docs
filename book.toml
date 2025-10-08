@@ -1,0 +1,5 @@
+[book]
+authors = ["German Molina"]
+language = "en"
+src = "src"
+title = "Archetypes Docs"
