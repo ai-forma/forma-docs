@@ -24,7 +24,7 @@ These three issues affect both how you **build** your agent and how it behaves o
 
 Imagine that your company is developing a customer service agent. Initial tests indicate that your chatbot is worth keeping, but users' feedback indicate that it "should be more friendly".
 
-Based on this feedback, the developers add a line to the system prompt, emphasizing the need to be "friendly". People on your team then test it, and notice that the answers have changed for the better. **The challenge during development** is that you cannot know whether this is a consistent change, caused by the new system prompt; of if it is caused by the fact that—as expected—these answers are not the same as before. 
+Based on this feedback, the developers add a line to the system prompt, emphasizing the need to be "friendly". People on your team then test it, and notice that the answers have changed for the better. **The challenge during development** is that you cannot know whether this is a consistent change, caused by the new system prompt; or if it is caused by the fact that—as expected—these answers are not the same as before. 
 
 Something similar happens **in production**: You cannot know how many of your users will perceive any change, for the better or worse.
 
