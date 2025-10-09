@@ -54,7 +54,7 @@ A **Workflow** is a set of nodes that depend on each other (for the Geeks, it is
 
 An interesting feature is that a workflow can itself be exposed as a **tool**. This means that a node can decide to call a completely different worflow and then use its output to answer a question. For instance, the example above—the workflow that writes blog posts based on academic papers—could be a tool within a larger AI Agent that cannot only do that, but also other tasks (e.g., write abstracts or format references). This makes workflows both composable and reusable, and let Archetype agents implement complex logic at scale.
 
-> **Note**: When a workflow is used as a tool, it does not receive the whole conversation with the client..
+> **Note**: When a workflow is used as a tool, it does not receive the whole conversation with the client.
 
 
 ## 4. Agents

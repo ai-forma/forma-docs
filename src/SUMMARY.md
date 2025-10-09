@@ -10,6 +10,7 @@
 - [Archetypes Philosophy (Prompting over Coding)]()
 - [Security Model]()
 - [Architecture Overview]()
+- [Evaluations](./documentation/evals.md)
 
 ---
 
@@ -21,7 +22,7 @@
 - [Running Locally with Docker]()
 - [Deployment (Cloud, On-Prem, K8s)]()
 - [Observability and Monitoring](./how-to/observability.md)
-- [Testing and Evaluation]()
+- [Testing and Evaluation](./how-to/evaluations.md)
 - [Using Archetypes CLI]()
 - [Managing Secrets]()
 - [Best Practices for Enterprise Use]()
