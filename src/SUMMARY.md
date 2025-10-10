@@ -1,13 +1,13 @@
 # Summary
 
-[What is `Archetypes`?](./documentation/intro.md)
+[What is `Forma`?](./documentation/intro.md)
 
 ---
 
 # Core Concepts
 
 - [Components of an AI Agent](./documentation/building-blocks.md)
-- [Archetypes Philosophy (Prompting over Coding)]()
+- [Forma Philosophy (Prompting over Coding)]()
 - [Security Model]()
 - [Architecture Overview]()
 - [Evaluations](./documentation/evals.md)
@@ -16,6 +16,7 @@
 
 # How-to Guides
 
+- [Getting started](./how-to/getting-started.md)
 - [Set up a Development Environment]()
 - [Define your First Agent]()
 - [Authenticating to LLM Providers]()
@@ -23,7 +24,7 @@
 - [Deployment (Cloud, On-Prem, K8s)]()
 - [Observability and Monitoring](./how-to/observability.md)
 - [Testing and Evaluation](./how-to/evaluations.md)
-- [Using Archetypes CLI]()
+- [Using Forma CLI]()
 - [Managing Secrets]()
 - [Best Practices for Enterprise Use]()
 

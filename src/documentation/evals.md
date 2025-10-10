@@ -105,8 +105,8 @@ Our view is that this is still a developing area, but here are some of the best 
 
 Evaluations turn intuition into evidence. They allow teams to iterate confidently, prove improvements, and maintain consistency as agents evolve. Whether automated or manual, well-designed evaluations are what turn a good demo into a reliable product.
 
-## How Archetypes helps
+## How Forma helps
 
-Archetypes makes it easy to bring evaluations into your development and deployment workflow from day one. Because agents in Archetypes are composed of nodes, workflows, and agents, you can evaluate the quality and consistency of each of these layers independently. This means you can test a single node’s decision logic (e.g., “does the summarizer respond politely?”), a workflow’s structure (e.g., “does this pipeline produce a coherent final output?”), or the full agent end-to-end — using the exact same tooling.
+Forma makes it easy to bring evaluations into your development and deployment workflow from day one. Because agents in Forma are composed of nodes, workflows, and agents, you can evaluate the quality and consistency of each of these layers independently. This means you can test a single node’s decision logic (e.g., “does the summarizer respond politely?”), a workflow’s structure (e.g., “does this pipeline produce a coherent final output?”), or the full agent end-to-end — using the exact same tooling.
 
 Evaluations can be executed directly from the CLI, which makes them easy to automate in CI/CD pipelines or DevOps environments. Each evaluation run produces structured results that can optionally be pushed to Phoenix Arize, where you can visualize trends, compare experiments, and curate datasets for further training or tuning. This combination of modular testing, automation, and observability turns evaluations from a manual QA process into a continuous, data-driven feedback loop — helping you systematically raise your agent’s reliability and quality over time.

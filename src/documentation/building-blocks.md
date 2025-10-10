@@ -1,6 +1,6 @@
 # Core Concepts
 
-Archetypes is built around a small set of concepts. By understanding these, you can read, write, and reason about any agent you define. Having a small set of concepts also helps understand traces and debug information better.
+Forma is built around a small set of concepts. By understanding these, you can read, write, and reason about any agent you define. Having a small set of concepts also helps understand traces and debug information better.
 
 ## 1. LLMs
 

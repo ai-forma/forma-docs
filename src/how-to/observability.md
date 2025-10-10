@@ -1,12 +1,12 @@
 # Observability and Monitoring
 
-Observability is built into every Archetypes container image.  
+Observability is built into every Forma container image.  
 By default, agents ship with [OpenTelemetry](https://opentelemetry.io/) instrumentation, extended with [OpenInference](https://arize-ai.github.io/openinference) standards.  
 
 This means:
 - You can send traces, logs, and metrics to **any OTEL-compatible backend** (Grafana, Tempo, Datadog, etc.).
 - You can analyze AI-specific traces with [Phoenix Arize](https://phoenix.arize.com).
-- You can integrate Archetypes agents into your existing observability stack with no additional coding.
+- You can integrate Forma agents into your existing observability stack with no additional coding.
 
 ---
 
@@ -38,7 +38,7 @@ export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT="http://localhost:4317/v1/metrics"
 
 ## Log Levels
 
-Control the verbosity of Archetypes logs with AI_LOGS variables:
+Control the verbosity of Forma logs with AI_LOGS variables:
 
 ## Options: trace | debug | info (default)
 
