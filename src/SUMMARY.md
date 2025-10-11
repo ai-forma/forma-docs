@@ -19,6 +19,7 @@
 - [Getting started](./how-to/getting-started.md)
 - [Set up a Development Environment]()
 - [Define your First Agent]()
+- [Evaluate your First Agent](./how-to/evaluate-first-agent.md)
 - [Authenticating to LLM Providers]()
 - [Running Locally with Docker]()
 - [Deployment (Cloud, On-Prem, K8s)]()

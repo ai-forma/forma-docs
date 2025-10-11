@@ -10,7 +10,7 @@ So, in order to use it, you will need:
 4. **`git`** - For managing different versions and changes in an auditable and secure manner.
 
 
-## Describing aForma AI Agents
+## Describing Forma AI Agents
 
 Forma agents are fully described using text files and, therefore, it is only natural that **your main development tool will be a code/text editor**. The advantage of a good code/text editor is that it will give you (unsurprisingly) excellent text editing capabilities, and good integration with tools like [version control](https://en.wikipedia.org/wiki/Version_control) and the Forma CLI. Additionally, a good editor will be able to highlight the syntax of the different file formats we will be using (`yaml`, `markdown`, `json`).
 
