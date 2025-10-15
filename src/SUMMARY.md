@@ -7,6 +7,7 @@
 # Core Concepts
 
 - [Components of an AI Agent](./documentation/building-blocks.md)
+- [AI Agents' memory](./documentation/memory.md)
 - [Forma Philosophy (Prompting over Coding)]()
 - [Security Model]()
 - [Architecture Overview]()
