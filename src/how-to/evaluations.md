@@ -9,7 +9,7 @@ At the moment, we use [Arize Phoenix](https://phoenix.arize.com/) as an evaluati
 
 
 ```sh
-docker run -p 6006:6006 -p 4317:4317 -i -t arizephoenix/phoenix:latest
+docker run  --rm -p 6006:6006 -p 4317:4317 -i -t arizephoenix/phoenix:latest
 ```
 
 ### In production
