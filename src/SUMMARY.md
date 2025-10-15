@@ -19,6 +19,7 @@
 - [Getting started](./how-to/getting-started.md)
 - [Set up a Development Environment]()
 - [Define your First Agent]()
+- [Add contextual memory](./how-to/contextual-memory.md)
 - [Evaluate your First Agent](./how-to/evaluate-first-agent.md)
 - [Authenticating to LLM Providers]()
 - [Running Locally with Docker]()
