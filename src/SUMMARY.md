@@ -4,14 +4,15 @@
 
 ---
 
-# Core Concepts
+# Conceptual guides
 
-- [Components of an AI Agent](./documentation/building-blocks.md)
-- [AI Agents' memory](./documentation/memory.md)
+- [Components of a Forma Agent](./documentation/building-blocks.md)
+- [About an AI Agent's memory](./documentation/memory.md)
 - [Forma Philosophy (Prompting over Coding)]()
 - [Security Model]()
 - [Architecture Overview]()
 - [Evaluations](./documentation/evals.md)
+- [Client flavours]()
 
 ---
 
@@ -34,6 +35,9 @@
 ---
 
 # Examples
+
+- [Front end](./examples/front-end/front-end-intro.md)
+  - [NextJS and Vercel AI-SDK v5](./examples/front-end/vercel-aisdk-5.md)
 
 ---
 
