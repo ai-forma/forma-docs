@@ -190,9 +190,69 @@ export default function Home() {
     </main>
   );
 }
+
 ```
 
-### Setup the Forma AI Agent
+## Setup the Back End
+
+Yes, so what will happen here is that your browser (i.e., Front end) will send a request to your back end (the code below) which will forward the request to the Forma agent. 
+
+> **Note** - The reason to implement it like this is for you to add authentication, security and all sorts of measures you think are needed. **WE STRONGLY ENCOURAGE YOU ADD AUTHENTICATION**
+
+So, add the code below to `app/api/chat/route.ts`. This path is the one the `useChat` function defines by default. You can change it but there is no need at the moment.
+
+```ts
+// app/api/chat/route.ts
+
+import { NextRequest, NextResponse } from "next/server";
+import { baseFormaUrl } from "../rest_utils";
+
+
+export async function POST(request: NextRequest) {
+    const body = await request.json() // Parse the front-end request
+    try {
+        // Send request to Forma Agent        
+        const r = await fetch(`${baseFormaUrl()}/v1/chat`, {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+            cache: 'no-store',
+        });
+
+        if (!r.ok) {
+          // check if this was successful
+          let error = await r.text()
+          console.error(error)
+          return new NextResponse(JSON.stringify({
+              status: r.status,
+              error
+          }), { status: r.status });
+        }
+
+        // Pipe Forma's stream directly to client, 
+        // adding the headers expected by the front-end
+        const sseHeaders = {
+            "x-vercel-ai-ui-message-stream": "v1",
+            "Transfer-Encoding": "chunked",
+            'Cache-Control': 'no-cache, no-transform',
+            'Connection': 'keep-alive',
+            'Content-Type': 'text/event-stream',
+            "X-Accel-Buffering": "no"
+        };
+        
+        return new NextResponse(r.body, {
+            status: 200,
+            headers: sseHeaders,
+        });
+
+    } catch (error) {
+        console.error('Error proxying SSE stream:', error);
+        return new NextResponse("Failed to connect to the streaming service.", { status: 500 });
+    }
+}
+```
+
+## Configure your Forma AI Agent so respect this communication protocol
 
 In order for our Forma agent to be compatible with this chatbot, we need to set the `client.flavor` to `ai-sdk-v5`
 
