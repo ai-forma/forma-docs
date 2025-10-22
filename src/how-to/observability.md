@@ -38,12 +38,12 @@ export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT="http://localhost:4317/v1/metrics"
 
 ## Log Levels
 
-Control the verbosity of Forma logs with AI_LOGS variables:
+Control the verbosity of Forma logs with FORMA_LOGS variables:
 
 ## Options: trace | debug | info (default)
 
 ```sh
-export AI_LOGS=debug
+export FORMA_LOGS=debug
 ```
 
 * trace – Most detailed, includes every span and step.
