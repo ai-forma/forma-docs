@@ -16,7 +16,7 @@
 
 ---
 
-# How-to Guides
+# Hands-on Guides
 
 - [Getting started](./how-to/getting-started.md)
 - [Set up a Development Environment]()
@@ -34,10 +34,10 @@
 
 ---
 
-# Examples
+# Guided Examples
 
-- [Front end](./examples/front-end/front-end-intro.md)
-  - [NextJS and Vercel AI-SDK v5](./examples/front-end/vercel-aisdk-5.md)
+- [Client applications](./examples/clients/clients-intro.md)
+  - [NextJS and Vercel AI-SDK v5](./examples/clients/vercel-aisdk-5.md)
 
 ---
 

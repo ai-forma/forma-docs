@@ -8,9 +8,9 @@ This means:
 - You can analyze AI-specific traces with [Phoenix Arize](https://phoenix.arize.com).
 - You can integrate Forma agents into your existing observability stack with no additional coding.
 
----
 
-## What We Collect
+
+## What you will collect
 
 - **Traces** – Each request and workflow execution is traced, including LLM calls and tool invocations.  
 - **Metrics** – Counters and histograms for request counts, latencies, and error rates.  
@@ -18,7 +18,7 @@ This means:
 
 We intentionally **do not log our dependencies** (like LLM provider SDKs). Instead, we propagate their errors and report them in a clean, standardized way. That way, your logs reflect *your agent’s behavior*, not library internals.
 
----
+
 
 ## Configuration
 
@@ -40,15 +40,16 @@ export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT="http://localhost:4317/v1/metrics"
 
 Control the verbosity of Forma logs with FORMA_LOGS variables:
 
-## Options: trace | debug | info (default)
 
 ```sh
-export FORMA_LOGS=debug
+export FORMA_LOGS=info # or debug | trace | warn | error | info (default)
 ```
 
-* trace – Most detailed, includes every span and step.
-* debug – Useful for development; shows workflow decisions and tool calls.
-* info – Production-friendly; high-level events and errors only.
+* `trace` – Most detailed, includes every span and step.
+* `debug` – Useful for development; shows workflow decisions and tool calls.
+* `info` – Production-friendly; high-level events and errors only.
+* `warn` - logs warnings and errors
+* `error` - logs only errors
 
 ### Quick Start with Phoenix
 
