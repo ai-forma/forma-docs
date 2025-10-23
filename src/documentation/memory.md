@@ -13,7 +13,7 @@ These two play very different roles. Short-term memory lets an agent carry a coh
 
 ## Short-term or "contextual" memory
 
-> *"AI Agents without contextual memory just suck... there, that’s the quote."*
+> *"Chatbots without contextual memory just suck... there, that’s the quote."*
 
 Short-term or **contextual memory** is critical for ensuring a natural and continuous interaction. Without it, every exchange—your question and the agent’s response—stands completely alone, like talking to someone with a 3-second attention span.
 
@@ -48,7 +48,6 @@ Practically speaking, contextual memory often looks like this:
 * The model then generates an answer *as if* it remembered the whole conversation... but truly, we need to provide it every time
 
 In summary, “giving the agent a short-term memory” really means “let's maintain the history of the conversation somewhere and feed it back each time.” And thus, while the *intelligence* comes from the LLM's training, the *continuity* comes from your memory implementation.
-
 
 
 > **Note** This design works well up to a point — usually limited by the model’s **context window** (the maximum number of tokens it can process at once). Beyond that, messages must be summarized, compressed, or dropped. In my experience, you can keep the last N (e.g., 25?) messages and conversation might still feel natural.

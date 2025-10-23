@@ -34,10 +34,11 @@
 
 ---
 
-# Guided Examples
+# Detailed Examples
 
 - [Client applications](./examples/clients/clients-intro.md)
-  - [NextJS and Vercel AI-SDK v5](./examples/clients/vercel-aisdk-5.md)
+  - [Vercel AI-SDK v5](./examples/clients/vercel-aisdk-5.md)
+  -  [Vercel AI-SDK v5 | persist](./examples/clients/vercel-aisdk-5-persist.md)
 
 ---
 

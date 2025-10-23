@@ -107,9 +107,9 @@ import { useCallback, useRef, useState } from "react";
 type MessagePart = UIMessagePart<UIDataTypes, UITools>
 
 type ChatRequestOptions = {
-  headers: Record<string, string> | Headers
-  body: object,
-  data: object
+  headers?: Record<string, string> | Headers
+  body?: object,
+  data?: object
 }
 
 function Part({ part }: { part: MessagePart }) {
