@@ -67,13 +67,13 @@ Then, make sure the user is initialized properly when the page loads.
 
 // import useEffect
 useEffect(() => {
-    // You need to handle this with 
-    // your own authentication service
-    setUserId('my-user-which-i-will-authenticate')
-  }, [])
+  // You need to handle this with 
+  // your own authentication service
+  setUserId('my-user-which-i-will-authenticate')
+}, [])
 ```
 
-### Create a new user when the website opens
+### Create a new session when the user logs in
 
 Once a user logs in, we need to create a new session for them. We do this by reaching the `v1/init` endpoint. The way to do this on the front-end is the following.
 
@@ -91,7 +91,6 @@ Then, ask the Forma Agent to initialize and give you a new session-id when the u
 const getSessionId = useCallback(async () => {
     // Let's not create a session if we have no user or session IDs
     if (!userId) {
-      console.warn("no user id")
       return
     }
 
@@ -181,8 +180,8 @@ function SubmitForm({ sendMessage, userId, sessionId }: {
     }
     sendMessage({ text }, {      
       headers: {
-        "x-user-id": userId || "", // <- We add this info as a header
-        "x-session-id": sessionId || "" // <- We add this info as a header
+        "x-user-id": userId || "", // <- We pass userId in the header
+        "x-session-id": sessionId || "" // <- Also, sessionId in the header
       }
     })
   }, [sendMessage, userId, sessionId])
@@ -214,7 +213,11 @@ We added new arguments to `SubmitForm`, so we need to adjust this section:
 return (
   <main className='flex flex-col h-screen w-full max-w-3xl mx-auto overflow-hidden'>
     <Chatlog messages={messages} />
-    <SubmitForm sendMessage={sendMessage} userId={userId} sessionId={sessionId} />
+    <SubmitForm 
+      sendMessage={sendMessage}  
+      userId={userId} // <- pass user id
+      sessionId={sessionId} // <- pass session id
+    />
   </main>
 );
 ```
@@ -254,17 +257,28 @@ const r = await fetch(`${process.env.FORMA_AGENT_URL!}/v1/chat`, {
 
 ## Send just the last message.
 
-```ts
-// Search for this line in `app/api/chat/route.ts`
-// it should be at the top, like line 5 or something
-const body = await request.json()
-```
-
-Replace it by the following two lines:
+In order to only send the last message, we need to configure the `useChat` hook we used previously. It should now look like this:
 
 ```ts
-let body = await request.json()
-body = body.messages.at(-1) // last message
+// file: `app/page.tsx`
+// Update the call to `useChat` to this:
+const {
+  messages,
+  sendMessage,
+} = useChat<UIMessage>({
+  // Import DefaultChatTransport from 'ai'
+  transport: new DefaultChatTransport({
+    prepareSendMessagesRequest: ({ messages }) => {
+      return {
+        body: messages.at(-1)!, // <-- Send only the last message
+      }
+    }
+  }),
+  onError: (e) => {
+    console.warn(e)
+  }
+});
+
 ```
 
 ## Run it all together
