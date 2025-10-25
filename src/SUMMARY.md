@@ -10,7 +10,7 @@
 - [About an AI Agent's memory](./documentation/memory.md)
 - [Forma Philosophy (Prompting over Coding)]()
 - [Security Model]()
-- [Architecture Overview]()
+- [Architecture Overview](./documentation/architecture.md)
 - [Evaluations](./documentation/evals.md)
 - [Client flavours]()
 
@@ -19,10 +19,14 @@
 # Hands-on Guides
 
 - [Getting started](./how-to/getting-started.md)
-  - [Set up a Development Environment]()
+  - [Development Environment](./how-to/dev-environment.md)
   - [Dory - Your first Forma agent](./how-to/dory.md)
-  - [Adding memory](./how-to/contextual-memory.md)
-  - [Tools](./examples/agents/single-node-tools.md)
+  - [Give Dory some memory](./how-to/contextual-memory.md)
+  - [Workflows]()
+  - [Adding Tools](./how-to/tools-introduction.md)
+  - [Clients and User Interfaces]()
+- [More about tools]()
+  - []()
 - [Evaluation and testing](./how-to/evaluations.md)
   - [Evaluate your First Agent](./how-to/evaluate-first-agent.md)
   - [Continuous evaluation]()

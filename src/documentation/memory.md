@@ -50,7 +50,9 @@ Practically speaking, contextual memory often looks like this:
 In summary, “giving the agent a short-term memory” really means “let's maintain the history of the conversation somewhere and feed it back each time.” And thus, while the *intelligence* comes from the LLM's training, the *continuity* comes from your memory implementation.
 
 
-> **Note** This design works well up to a point — usually limited by the model’s **context window** (the maximum number of tokens it can process at once). Beyond that, messages must be summarized, compressed, or dropped. In my experience, you can keep the last N (e.g., 25?) messages and conversation might still feel natural.
+> **Note**: Because there is a limit to the amount of text we can send to an LLM, the number of messages an AI Agent can keep in Contextual Memory is limited. However, in my experience, you can keep the last N (e.g., 25?) messages and conversation will probably still feel natural.
+
+> **Note 2**: Not every agent needs contextual memory. For example, one-shot agents (e.g., those in charge of classifying or summarizing text) do not need contextual memory.
 
 
 ## Long-term memory
