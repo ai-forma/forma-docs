@@ -9,7 +9,7 @@
 - [Components of a Forma Agent](./documentation/building-blocks.md)
 - [About an AI Agent's memory](./documentation/memory.md)
 - [Forma Philosophy (Prompting over Coding)]()
-- [Security Model]()
+- [Security Model](./documentation/security.md)
 - [Architecture Overview](./documentation/architecture.md)
 - [Evaluations](./documentation/evals.md)
 - [Client flavours]()
