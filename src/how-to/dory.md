@@ -19,7 +19,7 @@ Your terminal should look like this:
 
 ![forma-init](./img/forma-init.png)
 
-> **Check progress**: this should have created a directory called `test-agent`
+> **✅ Check progress**: this should have created a directory called `test-agent`
 
 ## 2. Open the `test-agent` directory in a text editor
 
@@ -58,7 +58,7 @@ And an interactive chat should open. Try saying something, like 'hi' or whatever
 
 ![chat](./img/forma-chat.png)
 
-> **Check progress**: Does the AI Agent respond?
+> **✅ Check progress**: Does the AI Agent respond?
 
 ## 4. Edit your agent
 
@@ -97,7 +97,7 @@ Let's see what we have got here:
 | `llm`   | The only node here uses Ollama as its LLM, and uses the system promp stored in `./src/prompts/agent_prompt.md` (the one you edited) |
 
 
-## 6. A note about memory
+## 📌 A note about memory
 
 Depending on how much you talked to Dory, you might have noticed that it DID have [contextual memory](../documentation/memory.md#short-term-or-contextual-memory). For example, it could remember and revisit your previous messages to undestand the dialog, and it could summarize your conversation. 
 

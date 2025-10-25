@@ -29,5 +29,5 @@ However, this does not mean you are unprotected. Forma offers:
 2. **Evaluations** - Forma makes it dead easy for you to evaluate your agents before deploying
 3. **Rapid iteration** - Forma allows for rapid iteration and prompting, and avoids coding. This means that you spend most of your time improving your agent, not waiting or programming well-known solutions.
 4. **Monitoring** - By being Opentelemetry-compatible, Forma Agents can be monitored in production
-5. **Role-based access** - Tools can be set to require explicit roles (e.g., only managers can write to a database) (THIS HAS NOT YET BEEN IMPLEMENTED)
+5. **Role-based access** - Tools can be set to require explicit roles (e.g., only managers can write to a database) (⚠️ THIS HAS NOT YET BEEN IMPLEMENTED)
 

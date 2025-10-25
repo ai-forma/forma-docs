@@ -20,8 +20,8 @@
 
 - [Getting started](./how-to/getting-started.md)
   - [Development Environment](./how-to/dev-environment.md)
-  - [Dory - Your first Forma agent](./how-to/dory.md)
-  - [Give Dory some memory](./how-to/contextual-memory.md)
+  - [Dory, your first Forma agent](./how-to/dory.md)
+  - [Dory + contextual memory](./how-to/contextual-memory.md)
   - [Workflows]()
   - [Adding Tools](./how-to/tools-introduction.md)
   - [Clients and User Interfaces]()
