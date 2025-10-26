@@ -22,6 +22,7 @@
   - [Development Environment](./how-to/dev-environment.md)
   - [Dory, your first Forma agent](./how-to/dory.md)
   - [Dory + contextual memory](./how-to/contextual-memory.md)
+  - [What is Dory doing? (Observability)](./how-to/dory-traces.md)
   - [Workflows]()
   - [Adding Tools](./how-to/tools-introduction.md)
   - [Clients and User Interfaces]()

@@ -1,9 +1,10 @@
 ![forma logo](./img/forma-logo.svg)
 
-# What is Forma?
 
 
 > The **challenge** of Generative AI is that it shines at first but then takes hours of engineering to make it enterprise ready
+
+## What is Forma?
 
 Forma is a framework for building reliable, **production-grade AI agents**. In our experience, some rules of thumb that can help you do this is are:
 
@@ -79,4 +80,6 @@ Therefore, rather than asking you to migrate your workflow to a new hosted platf
 
 ### 6. Monitor
 
-The container images we give you have built-in [Opentelemetry](https://opentelemetry.io/) instrumentation, with added [Openinference](https://arize-ai.github.io/openinference) standards so you can analise your traces using [Phoenix Arize](https://phoenix.arize.com). This lets you check integrate Forma agents within your existing observability stack.
+The container images we give you have built-in [Opentelemetry](https://opentelemetry.io/) instrumentation, with added [Openinference](https://arize-ai.github.io/openinference) standards ([semantic conventions](https://arize-ai.github.io/openinference/spec/semantic_conventions.html)) so you can analise your traces using [Phoenix Arize](https://phoenix.arize.com). This lets you check integrate Forma agents within your existing observability stack.
+
+I am working on adding the Opentelemetry [Generative AI Framework semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-agent-spans/) as well.

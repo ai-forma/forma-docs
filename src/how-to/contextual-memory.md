@@ -49,7 +49,8 @@ services:
     image: mongo
     restart: always
     environment:
-      # Authentication
+      # Authentication. Services connecting to this database
+      # need to provide these
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     ports:      
@@ -110,15 +111,19 @@ forma chat
 
 > **📌 Note**: In order for this to work, the database needs to be running.
 
-If you go to [http://localhost:8081](http://localhost:8081), you should now see a new database called `dory`; and within it, a collection called [`ai_agent_sessions`](http://localhost:8081/db/dory/ai_agent_sessions).
-
-Now, messages you send and Dory's responses will be stored in this database.
+If you go to [http://localhost:8081](http://localhost:8081), you should now see a new database called `dory`; and within it, a collection called [`ai_agent_sessions`](http://localhost:8081/db/dory/ai_agent_sessions). All the messages you send, as well as Dory's responses, will be stored in this database.
 
 ![Dory Database](./img/dory-db.png)
 
 
 
+## What is next? We scale! 🚀
 
+Dory is a very simple AI agent. In fact, it can be considered an LLM Wrapper: it sends a message to an LLM, and it responds it. But from here, things will become more complex. We will add tools and workflows, allowing for a complex processing logic for each request.
 
+The next section is about [Observability](./dory-traces.md), which will let us understand what happens on every request. Getting into the habit of reading observability reports is very important for two reasons:
 
+1. Because, **once you deploy any AI agent, you do not get access to the code** any more (this is true for nearly all frameworks, not just Forma). All you can do to monitor what is happening when your real users/clients interact with your agent is through observability.
+2. Because with Forma—contrary to other frameworks—**your experience during development is nearly identical to your experience after deployment**. That is to say, you do not get to see what the code is doing exactly, but you do get to see what happens within the agent thanks to observability.
 
+See you in [the next section](./dory-traces.md)!
