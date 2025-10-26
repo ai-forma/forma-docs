@@ -1,4 +1,7 @@
+![forma logo](./img/forma-logo.svg)
+
 # What is Forma?
+
 
 > The **challenge** of Generative AI is that it shines at first but then takes hours of engineering to make it enterprise ready
 
