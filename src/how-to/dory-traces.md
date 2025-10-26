@@ -62,3 +62,8 @@ Digging deeper would provide you with much more and valuable information, such a
 6. How much of the 6.6 seconds were spent on each step of the process
 7. Why did the model stop anseering (did it finish? did it reach a limit? was the response flagged as offensive?)
 8. etc.
+
+## 🚀 Now we can safely scale Dory
+
+With Observability in place, we can scale Dory without having to guess what it is doing. We can inspect its behaviour, improve it, and ultimately deploy it so our users can interact with it. Let's start this scaling in [the next section](./workflows.md).
+

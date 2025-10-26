@@ -23,7 +23,7 @@
   - [Dory, your first Forma agent](./how-to/dory.md)
   - [Dory + contextual memory](./how-to/contextual-memory.md)
   - [What is Dory doing? (Observability)](./how-to/dory-traces.md)
-  - [Workflows]()
+  - [Workflows](./how-to/workflows.md)
   - [Adding Tools](./how-to/tools-introduction.md)
   - [Clients and User Interfaces]()
 - [More about tools]()

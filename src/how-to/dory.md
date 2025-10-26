@@ -103,4 +103,4 @@ Depending on how much you talked to Dory, you might have noticed that it did not
 
 > **Note**: Forma Agents are **stateless**, meaning that they do not keep conversation history or any other kind of state themselves. This has many benefits when putting them in production, but it also means that either the client (e.g., your browser) or an external database must be in charge of keeping track of the conversation history, and sending it to the agent.
 
-In the next section we will explore how to give Dory some contextual memory using a Database, so that the chat history stays safe even if the user closes the window or the computers shut down.
+In the [next section](./contextual-memory.md) we will explore how to give Dory some contextual memory using a Database, so that the chat history stays safe even if the user closes the window or the computers shut down.
