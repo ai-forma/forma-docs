@@ -1,4 +1,4 @@
-![forma logo](./img/forma-logo.svg)
+![forma logo](/img/forma-logo.svg)
 
 
 
@@ -17,7 +17,7 @@ Forma is a framework for building reliable, **production-grade AI agents**. In o
 
 
 <div style="width: fit-content; margin:auto; padding: 1em;">
-    <a style="padding: 0.5em 1em; border-radius:0.5em; background-color:var(--links); color:white;" href="./how-to/getting-started.md">Jump to "Quick start"</a>
+    <a style="padding: 0.5em 1em; border-radius:0.5em; background-color:var(--links); color:white;" href="../forma-docs/how-to/getting-started.md">Jump to "Quick start"</a>
 </div>
 
 ## How Forma helps you follow the principles above
