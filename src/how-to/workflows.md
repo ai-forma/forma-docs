@@ -177,7 +177,7 @@ The results will vary, but in my case, I got the following (predictably stupid) 
 > 
 > Según el estudio, las comunidades con infestaciones de hormigas más intensas dejaban de comer menos chorizos y más vegetales. De hecho, los hogares con cargas de hormigas vieron caer un 27% en la consumo de chorizos. Esto puede parecer un poco raro, pero piensa en ello así: tener muchas hormigas alrededor podría hacer que las personas se sientan más conscientes del medio ambiente y les estimule a cocinar comidas más saludables. ¿Quién sabe? Tal vez esas hormigas molestarte estén inspirando a nuestros padres (o nosotros!) para tomar mejor decisiones sobre la comida! ¡Eso es lo que llamo un giro emocionante en las costumbres del asado de siempre!
 
-## 3. See what exactly happened
+## 3. Check what happened
 
 Go to [http://localhost:6006/](http://localhost:6006/) and check the trace named `workflow`.
 
