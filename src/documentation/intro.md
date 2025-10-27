@@ -51,7 +51,7 @@ Additionally, Forma agents are defined using `yaml`, `json` and `markdown` files
 > * Contrary to programming code, prompts are not modular. They need to be coherent instructions. You cannot just replace one sentence by another sentence.
 > * Having reusable 'blocks' makes it really hard to audit the final prompt, because it is really not written anywhere, just built at runtime.
 > 
-> Forma DOES have prompt templates. However, the placeholders in them is reserved for values created dynamically, at runtime, by LLMs (as opposed to values known at development time).
+> [Forma DOES have prompt templates](../how-to/templates.md). However, the placeholders in them is reserved for values created dynamically, at runtime, by LLMs (as opposed to values known at development time).
 
 
 ### 3. Evaluate often

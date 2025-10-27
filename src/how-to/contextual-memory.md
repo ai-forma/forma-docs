@@ -93,7 +93,7 @@ This is very easy. Go to the `src/agent.yaml` file, and add a `persist_sessions:
 
 ```yaml
 id: dory
-persist_sessions: true # This here
+persist_sessions: true # <-- Set this option to True
 start:
   nodes:
     - llm:
