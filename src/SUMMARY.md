@@ -1,6 +1,6 @@
 # Summary
 
-[What is `Forma`?](./documentation/intro.md)
+[What is `Forma`?](./intro.md)
 
 ---
 

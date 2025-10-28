@@ -1,4 +1,4 @@
-![forma logo](/forma-docs/documentation/img/forma-logo.svg)
+![forma logo](/forma-logo.svg)
 
 
 
