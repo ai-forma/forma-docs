@@ -42,7 +42,7 @@ The contents of each of these should be relatively self-explanatory. If not, we 
 
 ## 3. Chat with your agent
 
-As you can imagine, `forma init` gives you a functional (although, pretty useless) AI Agent. So, let's try it, and we can improve it later.
+As you can imagine, `forma init` gives you a functional (although, pretty basic) AI Agent. So, let's try it, and we can improve it later.
 
 For this, you need to ppen a terminal window within your text editor:
 
