@@ -1,10 +1,13 @@
-![forma logo](/forma-logo.svg)
+![forma logo](/forma-docs/forma-logo.svg)
+
 
 
 
 > The **challenge** of Generative AI is that it shines at first but then takes hours of engineering to make it enterprise ready
 
 ## What is Forma?
+
+<iframe style="border:none" out width="420" height="315" src="https://www.youtube.com/embed/R6i4GjE-DmQ"> </iframe>
 
 Forma is a framework for building reliable, **production-grade AI agents**. In our experience, some rules of thumb that can help you do this is are:
 
