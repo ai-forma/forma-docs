@@ -3,15 +3,15 @@
 
 As you might have read in the [Evaluations explanation](../documentation/evals.md), evaluations are fundamental for developing trustworthy and reliable AI Agents. Forma encourages people to run evaluations often. This tutorial aims to explain the workflow that Forma has envisioned for Evaluations.
 
-In simple terms, an evaluation is actually a very simple concept:
+In simple terms, an evaluation is a straightforward concept:
 
 1. You have a sample question
 2. You ask that question to your agent
-3. You then you use some metric or rubric to decide whether the answer is good enough or not, and why (this will sometimes require having a sample output)
+3. You then use some metric or rubric to decide whether the answer is good enough or not, and why (this will sometimes require having a sample output)
 
 Forma can help us with these three steps.
 
-> **Note**: *Offline* evaluations refer to the evaluations **ran before** deploying an AI Agent. They are different from *online* or *continuous* evaluation in that they can use pre-established datasets to compare actual vs expected answers. Continuous evaluation is still in development.
+> **Note**: *Offline* evaluations refer to the evaluations **run before** deploying an AI Agent. They are different from *online* or *continuous* evaluation in that they can use pre-established datasets to compare actual vs expected answers. Continuous evaluation is still in development.
 
 ## 1. Use *Personas* to generate sample questions
 
@@ -39,9 +39,11 @@ So, we can generate some sample data by running:
 forma tester -f wanderer.yaml -n 5
 ```
 
+You will notice that the `wanderer.json` file contains a list of objects which only have an `input` field. Each of these examples *can* also contain an `expected_output` field, which may be used for contrasting them with the responses from your agent.
+
 ## 2. Upload the dataset to Arize Phoenix
 
-You are probably familiar by now with the fact that Forma depends on other services to operate properly. The same service we used in the [previous tutorial](./dory-traces.md)—called [Arize Phoenix](https://arize.com/docs/phoenix)—will help us run evaluations.
+You are probably familiar by now with the fact that Forma depends on other services to operate properly. The same service we used in the [previous tutorial](./dory-traces.md)—called [Arize Phoenix](https://arize.com/docs/phoenix)—helps us manage our datasets and also visualise results in order to know whether our changes have improved the agent or not.
 
 So, let's get that service running (if you haven't already)
 
@@ -56,7 +58,9 @@ And then upload the dataset we just created to it.
 forma dataset-upload -f ./evals/data/wanderer.json
 ```
 
-You will notice that the `wanderer.json` file contains a list of object which only conain an `input` field. Each of these examples *can* also contain an `expected_output` field, which may be used for contrasting them with the responses from your agent.
+If you now go to the Phoenix Service (in [http://localhost:6006/](http://localhost:6006/)), you should see your dataset:
+
+![wanderer-dataset](./img/phoenix-upladed-dataset.png)
 
 ## 3. Test your agent with that dataset
 
@@ -82,9 +86,13 @@ With this in place, we can now run:
 forma eval -e "my first experiment"
 ```
 
+If you now go to the Phoenix Service (in [http://localhost:6006/](http://localhost:6006/)), you should see the results of the evaluation, including the metrics:
+
+![phoenix-metric](./img/phoenix-experiment-result.png)
+
 # ❓What is happening under the hood?
 
-1. The first step is to ask your Agent, Node or Workflow that will be evaluated to produce an anser. This is called the `actual_output`.
+1. The first step is to ask your Agent, Node or Workflow that will be evaluated to produce an answer. This is called the `actual_output`.
 2. Having generated the `actual_output`, the metric template will be rendered. This template can contain only three fields:   
    * `actual_output` - Which will be replaced with the answer of the agent, node or other.
    * `input` - Which will be replaced by the input, extracted from the dataset.
