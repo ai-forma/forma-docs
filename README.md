@@ -2,4 +2,4 @@
 
 # Forma Documentation
 
-Find it [HERE](https://ai-forma.github.io/forma-docs/documentation/intro.html)
+Find it [HERE](https://ai-forma.github.io/forma-docs/intro.html)
