@@ -1,6 +1,6 @@
 # Summary
 
-[What is `Forma`?](./documentation/intro.md)
+[What is `Forma`?](./intro.md)
 
 ---
 
@@ -23,16 +23,13 @@
   - [Dory, your first Forma agent](./how-to/dory.md)
   - [Dory + contextual memory](./how-to/contextual-memory.md)
   - [*What* is Dory doing? (Traces)](./how-to/dory-traces.md)
-  - [*How* is Dory doing? (Evals)]()
+  - [*How* is Dory doing? (Evals)](./how-to/evaluations.md)
   - [Workflows](./how-to/workflows.md)
   - [Templates](./how-to/templates.md)
   - [Tools](./how-to/tools-introduction.md)
   - [Clients and User Interfaces]()
 - [More about tools]()
   - []()
-- [Evaluation and testing](./how-to/evaluations.md)
-  - [Evaluate your First Agent](./how-to/evaluate-first-agent.md)
-  - [Continuous evaluation]()
 - [Authentication]()
   - [Managing Secrets]()
   - [Forma Agents' API Key](./how-to/forma-agent-api-key.md)  
@@ -41,6 +38,7 @@
   - [Deployment (Cloud, On-Prem, K8s)]()
   - [Observability and Monitoring](./how-to/observability.md)
   - [Best Practices for Enterprise Use]()
+  - [Continuous evaluation]()
 
 ---
 
