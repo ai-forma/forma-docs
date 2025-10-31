@@ -52,7 +52,3 @@
   - [Vercel AI-SDK v5 + DB](./examples/clients/vercel-aisdk-5-persist.md)
 ---
 
-# Reference Documentation
-
-
-
