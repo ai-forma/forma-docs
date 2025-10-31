@@ -3,3 +3,6 @@ authors = ["German Molina"]
 language = "en"
 src = "src"
 title = "Forma Docs"
+
+[output.html]
+no-section-label = true
