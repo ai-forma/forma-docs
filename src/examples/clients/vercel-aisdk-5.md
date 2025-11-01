@@ -263,7 +263,7 @@ export async function POST(request: NextRequest) {
             method: 'POST',
             headers: { 
                 "Content-Type": "application/json",
-                "X-Forma-Key": process.env.FORMA_AGENT_KEY!
+                "Authorization": `Bearer ${process.env.FORMA_AGENT_KEY!}`
              },
             body: JSON.stringify(body),
             cache: 'no-store',
