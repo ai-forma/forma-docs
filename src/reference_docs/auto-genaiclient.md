@@ -1,7 +1,7 @@
 # GenaiClient
 
-Used to define which Generative AI Client will be
-used to process information
+Defines the LLM Provider, the model and the settings
+utilise to generate responses
 
 
 ## Supported Variants
@@ -12,6 +12,10 @@ used to process information
 > provider: name-of-variant
 > ```
 
-* [`mock-l-l-m`](./auto-mockllm.md): A mock LLM
-* [`openai-v1`](./auto-openaiv1.md): A client for OpenAI\'s v1 API
-* [`ollama`](./auto-ollama.md): A client for Ollama
+### [`ollama`](./auto-ollama.md)
+A client for Ollama models.
+
+Ideal for running local processes in an easy manner during
+development
+### [`openai-v1`](./auto-openaiv1.md)
+A client for OpenAI\'s v1 API

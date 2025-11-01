@@ -1,5 +1,15 @@
 # Ollama
 
+A client for Ollama running in OpenaAI-compatible mode
+(which happens by default)
+
+It attempts to adhere as strictly as possible (even if
+some features are not supported by Forma).
+
+> 🔑 **Authentication**: Does not support authentication yets
+
+> Note: the documentation below has been copied nearly verbatim
+> from OpenAI\'s one, as reference
 
 
 ## Full Specification
@@ -31,18 +41,27 @@ stop:
 
 #### `endpoint`
 
+The endpooint to utilize. Defaults to `http://127.0.0.1:11434`
 
 #### `model`
 
+The model to utilize. Defaults to `llama3.1:8b`
 
 #### `stream` (*optional*)
 
+If set to true, the model response data will be streamed
+to the client as it is generated using server-sent events.
+See the Streaming section below for more information,
+along with the streaming responses guide for more information
+on how to handle the streaming events.
 
 #### `tools` (*optional*)
 
+A list of tools the model may select as appropriate to call.
 
 #### `format` (*optional*)
 
+An object specifying the format that the model must output.
 
 #### `num_keep` (*optional*)
 
@@ -58,6 +77,12 @@ stop:
 
 #### `top_p` (*optional*)
 
+An alternative to sampling with temperature, called nucleus sampling,
+where the model considers the results of the tokens with top_p probability
+mass. So 0.1 means only the tokens comprising the top 10% probability
+mass are considered.
+
+We generally recommend altering this or temperature but not both.s
 
 #### `min_p` (*optional*)
 

@@ -1,5 +1,14 @@
 # OpenaiV1
 
+A client for OpenAI\'s v1 api
+
+It attempts to adhere as strictly as possible (even if
+some features are not supported by Forma).
+
+> 🔑 **Authentication**: uses the `OPENAI_API_KEY` API Key
+
+> Note: the documentation below has been copied nearly verbatim
+> from OpenAI\'s one, as reference
 
 
 ## Full Specification
@@ -38,9 +47,11 @@ top_p: number # optional
 
 #### `endpoint`
 
+The endpoint to reach for the API. Defaults to `https://api.openai.com`
 
 #### `model`
 
+The model to use. Defaults to `gpt-3.5-turbo`
 
 #### `audio` (*optional*)
 
