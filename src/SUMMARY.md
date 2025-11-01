@@ -52,3 +52,19 @@
   - [Vercel AI-SDK v5 + DB](./examples/clients/vercel-aisdk-5-persist.md)
 ---
 
+# Reference Documentation
+
+- [Agent](./reference_docs/auto-agent.md)
+- [AgentClient](./reference_docs/auto-agentclient.md)
+- [ClientFlavor](./reference_docs/auto-clientflavor.md)
+- [Eval](./reference_docs/auto-eval.md)
+- [GenaiClient](./reference_docs/auto-genaiclient.md)
+	- [MockLLM](./reference_docs/auto-mockllm.md)
+	- [OpenaiV1](./reference_docs/auto-openaiv1.md)
+	- [Ollama](./reference_docs/auto-ollama.md)
+- [Metric](./reference_docs/auto-metric.md)
+- [Node](./reference_docs/auto-node.md)
+- [Tool](./reference_docs/auto-tool.md)
+- [ToolRunner](./reference_docs/auto-toolrunner.md)
+	- [TemplateTool](./reference_docs/auto-templatetool.md)
+	- [ToolWorkflow](./reference_docs/auto-toolworkflow.md)
