@@ -133,7 +133,8 @@ export async function GET(request: NextRequest) {
 
     const headers = new Headers();
     // add authentication
-    headers.set("X-Forma-Key", process.env.FORMA_AGENT_KEY!);    
+    
+    headers.set("Authorization", `Bearer ${process.env.FORMA_AGENT_KEY!}`);    
     // Add the user id, which will own the newly created session
     headers.set("X-User-Id", userId);
 
@@ -245,7 +246,7 @@ const r = await fetch(`${process.env.FORMA_AGENT_URL!}/v1/chat`, {
     method: 'POST',
     headers: {
         "Content-Type": "application/json",
-        "X-Forma-Key": process.env.FORMA_AGENT_KEY!,
+        "Authorization": `Bearer ${process.env.FORMA_AGENT_KEY!}`
         "X-User-Id": userId, // <-- Add this
         "X-Session-Id": sessionId // <-- And this
     },
