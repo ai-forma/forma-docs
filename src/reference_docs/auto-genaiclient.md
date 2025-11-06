@@ -13,9 +13,11 @@ utilise to generate responses
 > ```
 
 ### [`ollama`](./auto-ollama.md)
-A client for Ollama models.
+A client for [Ollama](https://ollama.com) inference.
 
 Ideal for running local processes in an easy manner during
 development
 ### [`openai-v1`](./auto-openaiv1.md)
-A client for OpenAI\'s v1 API
+A client for [OpenAI\'s](https://openai.com) v1 API
+### [`groq`](./auto-groq.md)
+Client for [Groq](https://groq.com)
