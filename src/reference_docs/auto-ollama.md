@@ -26,6 +26,7 @@ num_keep: int # optional
 seed: int # optional
 num_predict: int # optional
 top_k: int # optional
+response_format: OpenAIResponseFormat # optional
 top_p: number # optional
 min_p: number # optional
 typical_p: number # optional
@@ -74,6 +75,19 @@ An object specifying the format that the model must output.
 
 #### `top_k` (*optional*)
 
+
+#### `response_format` (*optional*)
+
+An object specifying the format that the model must output.
+
+Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }`
+enables Structured Outputs which ensures the model will match your
+supplied JSON schema.
+
+Setting to `{ \"type\": \"json_object\" }` enables the older JSON mode,
+which ensures the message the model generates is valid JSON.
+
+Using `json_schema` is preferred for models that support it.
 
 #### `top_p` (*optional*)
 
