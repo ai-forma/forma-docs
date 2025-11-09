@@ -33,7 +33,7 @@ presence_penalty: number # optional
 frequency_penalty: number # optional
 seed: i32 # optional
 response_mime_type: string
-response_schema: JsonSchema # optional
+response_format: JsonSchema # optional
 include_thoughts: boolean # optional
 thinking_budget: i32 # optional
 image_aspect_ratio: string # optional
@@ -126,7 +126,7 @@ Supported mimetype:
   otherwise the behavior is undefined.
   This is a preview feature.
 
-#### `response_schema` (*optional*)
+#### `response_format` (*optional*)
 
 The `Schema` object allows the definition of input and output
 data types. These types can be objects, but also primitives and arrays.
