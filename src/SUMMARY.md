@@ -62,7 +62,7 @@
 	- [Ollama](./reference_docs/auto-ollama.md)
 	- [OpenaiV1](./reference_docs/auto-openaiv1.md)
 	- [Groq](./reference_docs/auto-groq.md)
-	- [VertexAIClient](./reference_docs/auto-vertexaiclient.md)
+	- [VertexAI](./reference_docs/auto-vertexai.md)
 - [Metric](./reference_docs/auto-metric.md)
 - [Node](./reference_docs/auto-node.md)
 - [Tool](./reference_docs/auto-tool.md)
