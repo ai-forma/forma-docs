@@ -21,5 +21,5 @@ development
 A client for [OpenAI\'s](https://openai.com) v1 API
 ### [`groq`](./auto-groq.md)
 Client for [Groq](https://groq.com)
-### [`vertex-ai`](./auto-vertexaiclient.md)
+### [`vertex-ai`](./auto-vertexai.md)
 Client for Google\'s [Vertex AI](https://cloud.google.com/vertex-ai) platform

@@ -1,9 +1,12 @@
-# VertexAIClient
+# VertexAI
 
 A client for calling Google Cloud\'s Vertex AI models.
 
-> 🔑 **Authentication**: Work in progress... we aim to use the GCloud Credentials
-> as stored in the machine
+> 🔑 **Authentication**: We use the [Google Library](https://github.com/googleapis/google-cloud-rust), so whe edhere to the
+> [recommended Google Cloud Platform authentication method](https://docs.cloud.google.com/sdk/gcloud/reference/auth/application-default/login).
+> To run locally, you should run `gcloud auth application-default login` to acquire credentials, and set the `GOOGLE_CLOUD_PROJECT_ID`
+> environment variable. These two requirements will be automatically set in your deployed machines.
+
 
 > Note: the documentation below has been copied nearly verbatim
 > from Google Cloud\'s documentation.
