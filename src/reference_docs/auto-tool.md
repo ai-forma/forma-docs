@@ -17,6 +17,9 @@ actions to the LLM, so it can decide.
 name: string
 description: string # optional
 tool: ToolRunner
+just_for: 
+	- string
+	- ...
 ```
 
 #### `name`
@@ -35,5 +38,11 @@ discriminate between options.
 
 The Tool that will be executed if the this tool
 is selected.
+
+#### `just_for`
+
+The roles that are allowed to use this tool.
+If empty, everyone is allowed to use it; if not,
+only the specific roles in here are allowed to use it.
 
 
