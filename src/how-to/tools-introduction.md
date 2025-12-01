@@ -1,6 +1,6 @@
 # Introduction to Tools
 
-Tools are the instruments that **allow an AI Agent to *do* things**, rather than just *read and write*. By giving an Agent access to tools, you effectively transform it into a user interface. You can now use natural language to send emails, check the time, read a database and summarise the results, and much more. Depending on how you design your agent, you might want to give it permissions to do things without you asking (e.g., as a reaction to specific pictures being uploaded).
+Tools are the instruments that **allow an AI Agent to *do* things**, rather than just *read and write* text. By giving an Agent access to tools, you effectively transform it into a user interface. You can now use natural language to send emails, check the time, read a database and summarise the results, and much more. Depending on how you design your agent, you might want to give it permissions to do things without you asking (e.g., as a reaction to specific pictures being uploaded).
 
 Before jumping into a hands-on tutorial, you need to remember the following concepts:
 
