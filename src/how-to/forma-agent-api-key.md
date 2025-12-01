@@ -35,6 +35,8 @@ When making requests, make sure you add your API key using the API Key. For inst
 ```sh
 curl -X POST -i http://localhost:8080/v1/chat \
   -H "Authorization: Bearer key-not-for-production" \
+  -H "X-User-ID: user-id" \
+  -H "X-Session-ID: session-id" \
   -H "Content-Type: application/json" \
   -d '{"content":"hey"}'
 ```
