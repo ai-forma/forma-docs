@@ -32,7 +32,7 @@ tool:
 
 The above means that a user with EITHER `blog-writer` OR`admin` roles will be able to call this tool. Other users will not.
 
-## Indicating the user's roles
+## Indicating the user's roles in production
 
 To indicate this you would make a request as follows:
 
@@ -47,3 +47,7 @@ curl -X POST -i http://localhost:8080/v1/chat \
 ```
 
 > **Note:** again, Forma will not validate neither the user ID nor the roles. You should have a separate service do this before calling Forma.
+
+## Impersonating roles during development
+
+When running `forma serve` or `forma chat`, you can pass the flag `--roles role-1,role-2`.
