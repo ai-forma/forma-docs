@@ -15,6 +15,8 @@ Forma will handle the Role-based acess in the following way:
 
 This approach intends to eliminate the chances of an LLM calling a tool that should not be allowed to the user. An alternative could have been, for example, to add an instruction saying something like *"this user is in the Free tier, they do not have write access"*, but this is not reliable enough for a security-sensitive application.
 
+Another consequence of this is that, **if a user intents to call a function they have no access** to (e.g., a free-user asking for a paid feature), **there will be no error**. Forma will simply eliminate the restricted tools when asking the LLM to choose an action, and the LLM will not even be aware that such a tool exists.
+
 ## Limiting access to tools
 
 Restricting the use of a tool to specific roles is as simple as passing the `just_for` field to it. Let's remember the blog-writer agent we [developed earlier](./tools-introduction.md).
