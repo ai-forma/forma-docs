@@ -24,7 +24,7 @@ Restricting the use of a tool to specific roles is as simple as passing the `jus
 name: write-blog-post 
 description: writes great blog posts about research topics that the user wants, in Spanish
 just_for:           # Add this!
-   - blog-writers   # And this!
+   - blog-writer   # And this!
    - admin          # And this!
 tool:     
   # ... the rest of your tool
