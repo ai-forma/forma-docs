@@ -1,0 +1,49 @@
+# Role Based Access
+
+Role-based access is a feature that allows you to let some users do some things that other users cannot do. This is already very common on web applications, where developers assign *Roles* to users for cost, security or other concerns. For instance, you can have a role called `free-tier-user` which grants permissions to a subset of features. Similarly, an `admin` role might let users read/write data from a datbase that is inaccessible by other users. **Forma allows you to implement Role-based-access for the tools in your agent**.
+
+> **Note:** as mentioned in the [architecture](../documentation/architecture.md) section, Forma will not authenticate your users. A different component within your application should make sure the permissions and user ID given to forma are real.
+
+## How it is implemented
+
+Forma will handle the Role-based acess in the following way:
+
+1. You provide the roles of the user in the header of the request, follows: `curl -H 'X-User-Roles: paid-user,admin' ...`. (If no roles are provided, the user is assumed to have NO roles and thus they won't have access to any tool that is restricted.)
+2. Forma parses those, and—at every triage-stage of each node, at run time—will select the tools available for users with the specified roles.
+3. A request is made to the LLM including only this subset of tools.
+4. The path follows as usual
+
+This approach intends to eliminate the chances of an LLM calling a tool that should not be allowed to the user. An alternative could have been, for example, to add an instruction saying something like *"this user is in the Free tier, they do not have write access"*, but this is not reliable enough for a security-sensitive application.
+
+## Limiting access to tools
+
+Restricting the use of a tool to specific roles is as simple as passing the `just_for` field to it. Let's remember the blog-writer agent we [developed earlier](./tools-introduction.md).
+
+```yaml 
+
+name: write-blog-post 
+description: writes great blog posts about research topics that the user wants, in Spanish
+just_for:           # Add this!
+   - blog-writers   # And this!
+   - admin          # And this!
+tool:     
+  # ... the rest of your tool
+```
+
+The above means that a user with EITHER `blog-writer` OR`admin` roles will be able to call this tool. Other users will not.
+
+## Indicating the user's roles
+
+To indicate this you would make a request as follows:
+
+```sh
+curl -X POST -i http://localhost:8080/v1/chat \
+  -H "Authorization: Bearer key-not-for-production" \
+  -H "X-User-ID: user-id" \
+  -H "X-Session-ID: session-id" \
+  -H "X-User-Roles: admin, another-role" \
+  -H "Content-Type: application/json" \
+  -d '{"content":"write me a blog post, please!"}'
+```
+
+> **Note:** again, Forma will not validate neither the user ID nor the roles. You should have a separate service do this before calling Forma.
