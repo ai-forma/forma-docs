@@ -52,4 +52,6 @@ curl -X POST -i http://localhost:8080/v1/chat \
 
 ## Impersonating roles during development
 
-When running `forma serve` or `forma chat`, you can pass the flag `--roles role-1,role-2`.
+When running `forma serve`, you are emulating a production server and thus you should pass the roles using the `X-User-Roles` header.
+
+ or `forma chat`, you can pass the flag `--roles role-1,role-2`.
