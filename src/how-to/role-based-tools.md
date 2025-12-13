@@ -54,4 +54,4 @@ curl -X POST -i http://localhost:8080/v1/chat \
 
 When running `forma serve`, you are emulating a production server and thus you should pass the roles using the `X-User-Roles` header.
 
- or `forma chat`, you can pass the flag `--roles role-1,role-2`.
+When using `forma chat`, on the contrary, you essentially "start a session as a user with roles". You do this by passing the flag `--roles role-1,role-2`.
