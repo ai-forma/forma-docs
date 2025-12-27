@@ -122,3 +122,7 @@ When you ask for a blog post:
 
 What you are seeing here is a key element of sophisticated AI Agents in Forma. While woorkflows let you break down big tasks into several smaller and more focused ones, tools let AI Agents decide what to do. On top of letting agents interact with external systems, tools are also routers that Agents can use to process requests in completely different ways depending on the input and its instruction. 
 
+
+# Available tools
+
+Check the list of tools in the [Reference Documentation](../reference_docs/auto-toolrunner.md).
