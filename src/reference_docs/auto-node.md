@@ -23,6 +23,12 @@ tools:
 evals: 
 	- Eval
 	- ...
+triage_evals: 
+	- Eval
+	- ...
+summarize_evals: 
+	- Eval
+	- ...
 ```
 
 #### `id`
@@ -56,6 +62,15 @@ The tools that the LLM can decide to call.
 
 #### `evals`
 
-The evaluations used to test this specific node.
+The evaluations used to test this specific node as a
+whole (different from Triage- and Summarize-specific evals)
+
+#### `triage_evals`
+
+The evaluations used to test the triage LLM specifically
+
+#### `summarize_evals`
+
+The evaluations used to test the summarize LLM specifically
 
 
