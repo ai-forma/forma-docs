@@ -28,9 +28,23 @@ The Forma CLI is the main tool you will use during development. Among other thin
 
 * **Start** new projects (`forma init`)
 * **Run a development server** for testing and prototyping (`forma serve`)
-* **Evaluat your agent** to ensure quality and guide your prompting (`forma eval`)
+* **Start an interactive command line chat** for testing and prototyping (`forma chat`)
+* **Evaluate your agent** to ensure quality and guide your prompting (`forma eval`)
+* **Create a synthetic evaluation dataset** using a persona (`forma tester`)
 
 Read more details on the [how to define your first agent](./dory.md) section.
+
+
+### Design of the Forma CLI
+
+The Forma CLI has been designed to be simple, quick, and easy to learn. A key element of this is that it is somehow opinionated... but we try to make it configurable.
+
+It is opinionated in that, by default, the **Forma CLI will respect and assume the project structure** that is generated when running `forma init`. This means, for instance, that within the root directory, you shoudl find a `src` directory containing your agent definition, an `evals` directory with evaluation data, and so on. 
+
+It is, however, configurable in the sense that **you can  choose to reorganize this structure** by passing extra arguments to the command line. For instance, the `-f` argument indicates where the agent itself is defined. Not providing it defaults to `./src/agent.yaml`, which is our recommended structure, but you can change it.
+
+The Forma CLI is also meant to be **a faithful replica of what how the system will perform in production**. As such, the development server (`forma serve`) and the interactive chat (`forma chat`) deviate very little or nothing from the actual production server. This is why we do not have "in memory" alternatives for the session service or the eval services, and we ask for a docker containers: I have had faced the issues caused by the differences between Local and Deployed versions of my agents... this does not help.
+
 
 ## You use Docker (or similar) to emulate services during development
 

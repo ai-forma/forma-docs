@@ -31,7 +31,7 @@
   - [Configuration]()
 - [Diving deeper](./how-to/diving-deeper.md)
   - [Role Based Tool Access](./how-to/role-based-tools.md)
-  - [Evaluating parts of agents]()
+  - [More on Evals](./how-to/unit-evals.md)
 - [Authentication]()
   - [Managing Secrets]()
   - [Forma Agents' API Key](./how-to/forma-agent-api-key.md)  
