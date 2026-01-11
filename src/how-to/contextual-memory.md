@@ -89,16 +89,11 @@ You should see something like the following:
 
 ## 3. Configure Dory so it has a memory
 
-This is very easy. Go to the `src/agent.yaml` file, and add a `persist_sessions: true` field. This will tel Forma that every message and response should be stored in the database.
+This is very easy. Go to the `runtime.yaml` file, and add a `persist_sessions: true` field. This will tel Forma that every message and response should be stored in the database.
 
 ```yaml
-id: dory
-persist_sessions: true # <-- Set this option to True
-start:
-  nodes:
-    - llm:
-        provider: ollama
-      system_prompt: $/prompts/agent_prompt.md
+persist_sessions: true # <-- HERE!
+client: sync
 ```
 
 ## 4. Chat and see your conversation in the database

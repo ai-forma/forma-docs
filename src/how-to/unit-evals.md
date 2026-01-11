@@ -121,7 +121,7 @@ LLMs:
 
 > 📌 **Note** that not all elements have evaluations... this will be important later
 
-> 📌 **Also note** that the workflows have a very horrible ID. This happens because, when Forma sees an element without an ID, it assigns one for it. Always assing IDs to any nodes you want to evalyate, as they change every time you load the agent.
+> 📌 **Also note** that the workflows have a very horrible ID. This happens because, when Forma sees an element without an ID, it assigns one for it. Always assing IDs to any nodes you want to evaluate, as they change every time you load the agent.
 
 ### Selecting what to evaluate
 

@@ -57,5 +57,9 @@ An interesting feature is that a workflow can itself be exposed as a **tool**. T
 
 ## 4. Agents
 
-An agent is a wrapper of a root Workflow and a set of configuration parameters. It contains information about the client application (e.g., what kind of messages will it send, and what it expects to receive); it contains information about the evaluations that can be ran, and more.
+An agent is a wrapper of a root Workflow and (potentially, in the future) a set of extra callbacks. 
+
+## 5. Runtime
+
+Separate from the agent, there are Runtime settings (by convention, stored in a `runtime.yaml` file). It contains information about the client application (e.g., what kind of messages will it send, and what it expects to receive), API keys, and more. Check settings in [the docs](../reference_docs/auto-runtimesettings.md).
 
