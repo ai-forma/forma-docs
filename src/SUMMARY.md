@@ -57,6 +57,7 @@
 
 - [Agent](./reference_docs/auto-agent.md)
 - [Eval](./reference_docs/auto-eval.md)
+- [FormaRuntime](./reference_docs/auto-formaruntime.md)
 - [GenaiClient](./reference_docs/auto-genaiclient.md)
 	- [Ollama](./reference_docs/auto-ollama.md)
 	- [OpenaiV1](./reference_docs/auto-openaiv1.md)
@@ -65,7 +66,6 @@
 - [Metric](./reference_docs/auto-metric.md)
 - [Node](./reference_docs/auto-node.md)
 - [RuntimeClient](./reference_docs/auto-runtimeclient.md)
-- [RuntimeSettings](./reference_docs/auto-runtimesettings.md)
 - [Tool](./reference_docs/auto-tool.md)
 - [ToolRunner](./reference_docs/auto-toolrunner.md)
 	- [TemplateTool](./reference_docs/auto-templatetool.md)
