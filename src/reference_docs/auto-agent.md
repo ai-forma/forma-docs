@@ -12,8 +12,6 @@ start: Workflow
 evals: 
 	- Eval
 	- ...
-persist_sessions: boolean
-client: AgentClient
 ```
 
 #### `id`
@@ -28,15 +26,5 @@ The Workflow that serves as a starting point of this Agent.
 
 The evaluations that will be used to test the
 Agent as a whole.
-
-#### `persist_sessions`
-
-If true, the Agent will keep the state and the history of the
-conversation in a MongoDB-compatible database.
-
-#### `client`
-
-Options for adapting Forma agents to different
-clients.
 
 

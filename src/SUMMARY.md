@@ -19,7 +19,7 @@
 # Hands-on Guides
 
 - [Getting started](./how-to/getting-started.md)
-  - [Development Environment](./how-to/dev-environment.md)
+  - [Development Environment]()
   - [Dory, your first Forma agent](./how-to/dory.md)
   - [Dory + contextual memory](./how-to/contextual-memory.md)
   - [*What* is Dory doing? (Traces)](./how-to/dory-traces.md)
@@ -56,8 +56,6 @@
 # Reference Documentation
 
 - [Agent](./reference_docs/auto-agent.md)
-- [AgentClient](./reference_docs/auto-agentclient.md)
-- [ClientFlavor](./reference_docs/auto-clientflavor.md)
 - [Eval](./reference_docs/auto-eval.md)
 - [GenaiClient](./reference_docs/auto-genaiclient.md)
 	- [Ollama](./reference_docs/auto-ollama.md)
@@ -66,6 +64,8 @@
 	- [VertexAI](./reference_docs/auto-vertexai.md)
 - [Metric](./reference_docs/auto-metric.md)
 - [Node](./reference_docs/auto-node.md)
+- [RuntimeClient](./reference_docs/auto-runtimeclient.md)
+- [RuntimeSettings](./reference_docs/auto-runtimesettings.md)
 - [Tool](./reference_docs/auto-tool.md)
 - [ToolRunner](./reference_docs/auto-toolrunner.md)
 	- [TemplateTool](./reference_docs/auto-templatetool.md)
