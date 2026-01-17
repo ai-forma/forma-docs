@@ -15,7 +15,7 @@ the input/output schema.
 ###  `sync`
 
 Basic service-to-service communication, with no streaming.
-Client sends an `LLMMessage`, and receives a new message back.
+Client sends an `LLMMessage`, and receives a new message back.    
 
 
 
