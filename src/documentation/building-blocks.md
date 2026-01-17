@@ -61,5 +61,5 @@ An agent is a wrapper of a root Workflow and (potentially, in the future) a set 
 
 ## 5. Runtime
 
-Separate from the agent, there are Runtime settings (by convention, stored in a `runtime.yaml` file). It contains information about the client application (e.g., what kind of messages will it send, and what it expects to receive), API keys, and more. Check settings in [the docs](../reference_docs/auto-runtimesettings.md).
+Separate from the agent, there are Runtime settings (by convention, stored in a `src/runtime.yaml` file). It contains information about the client application (e.g., what kind of messages will it send, and what it expects to receive), API keys, and more. Check settings in [the docs](../reference_docs/auto-runtimesettings.md).
 

@@ -32,6 +32,7 @@ Let's see what is in there
 | directory/file | purpose                                                                                                                       |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `src`          | Contains the actual definition of your agent, like tools, prompts, and more.                                                  |
+| `src/runtime.yaml` | Information regarding the runtime                                             (e.g., API Keys and client)                     |
 | `evals`        | Contains the metrics that datasets selected to run [Evaluations](../documentation/evals.md) for this agent                    |
 | `dev`          | We will discuss this one later. It has to do with emulation of other services                                                 |
 | `runtime.yaml` | Information regarding the runtime                                             (e.g., API Keys and client)                     |
