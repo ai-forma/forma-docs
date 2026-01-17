@@ -35,6 +35,7 @@ Let's see what is in there
 | `src/runtime.yaml` | Information regarding the runtime                                             (e.g., API Keys and client)                     |
 | `evals`        | Contains the metrics that datasets selected to run [Evaluations](../documentation/evals.md) for this agent                    |
 | `dev`          | We will discuss this one later. It has to do with emulation of other services                                                 |
+| `runtime.yaml` | Information regarding the runtime                                             (e.g., API Keys and client)                     |
 | `.env`         | This is the file where you will store configuration and secret variables, like API Keys and the URL of databases              |
 | `.gitignore`   | The file that defines what should be shared with the other people in your team, or not (e.g., you can have your own API Keys) |
 
