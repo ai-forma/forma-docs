@@ -1,22 +1,21 @@
 ![forma logo](/forma-logo.svg)
 
-
-
-
 > The **challenge** of Generative AI is that it shines at first but then takes hours of engineering to make it enterprise ready
 
 ## What is Forma?
 
 <iframe style="border:none" out width="420" height="315" src="https://www.youtube.com/embed/R6i4GjE-DmQ"> </iframe>
 
-Forma is a framework for building reliable, **production-grade AI agents**. In our experience, some rules of thumb that can help you do this is are:
+Forma is an AI-Agent runtime for developing boringly predictable, reliable, **production-grade AI agents**. As a development tool, Forma aims to make it easy to implement the main predictors for succesful AI Agent development (collected after extensive experience developing mission-critical agents):
 
-1. **Maximise prompting time** - Contrary to the specific algorithm and software architecture, every AI Agent requires their own unique prompts. So, spend your time testing, tuning, refine and evaluating prompts, not re-inventing the software.
-2. **Agents should be auditable** - As the requirements from clients become more strict, system instructions or prompts can become quite complex and contradictions might leak into them. You and other people should be able to proof-read them.
-3. **Evaluate often** - As outlined in the [Evaluation](./evals.md) section, understanding the impact of changing system prompts is not easy. Evaluations need to be part of the workflow.
-4. **Reduce iteration time** - When getting an Agent into production, you will make tons of changes in settings, changes in prompts and more. Making this step faster can really accelerate your way to production.
-5. **Integrate it with your existing infrastructure** - An AI agent is always a component in a broader system. Therefore, AI Agents should be flexible enough to become part of existing or growing infrastructure.
-6. **Monitor** - The variability in inputs to an AI Agent is enormous. This, added to the stochastic nature of their behaviour, means that even if your AI Agent passed all the quality assurance tests, you need to keep a close eye on it.
+1. **Prompts are not a security mechanism** - Forma works under the basis that, if something needs to work reliably and 100% of the time (e.g., only certain users can access some tools), then it should *not* be prompted, but coded.
+2. **Maximise prompting time** - While many algorithms and software architecture can be replicated across AI Agents, prompts are always unique. Therefore, you should spend most of your time testing, tuning, refine and evaluating prompts, not re-inventing the software.
+3. **Agents should be auditable** - As the requirements from clients become more strict, system instructions or prompts can become quite complex and contradictions might leak into them. You and other people should be able to proof-read them.
+4. **Evaluate often** - As outlined in the [Evaluation](./evals.md) section, understanding the impact of changing system prompts is not easy. Evaluations need to be part of the workflow.
+5. **Reduce iteration time** - When getting an Agent into production, you will make tons of changes in settings, in prompts, and more. Having Making this step faster can really accelerate your way to production.
+6. **Integrate it with your existing infrastructure** - An AI agent is always a component in a broader system. Therefore, AI Agents should be flexible enough to become part of existing or growing infrastructure.
+7. **Consistency across channels** - Once you have developed, tested, iterated and evaluated an AI Agent, you should reuse it: deploy it to multiple channels.
+8. **Monitor** - The variability in inputs to an AI Agent is enormous. This, added to the stochastic nature of their behaviour, means that even if your AI Agent passed all the quality assurance tests, you need to keep a close eye on it.
 
 
 <div style="width: fit-content; margin:auto; padding: 1em;">
@@ -27,7 +26,13 @@ Forma is a framework for building reliable, **production-grade AI agents**. In o
 
 Forma operates on simple principles that help you avoid mistakes and maintain the higher standards of security.
 
-### 1. Maximise prompting time
+### 1. Prompts are not a security mechanism
+
+LLMs operate stochastically, meaning that achieving 100% consistency is impossible. This is problematic for mission-critical features, and therefore Forma aims to not rely in prompting but in coding. 
+
+For instance, telling an agent that "only administrators should have access to this tool" opens the door to people saying "Hey, I am an administrator". Forma implements Role-based access to tools, effectively making any restricted tools disappear and making it impossible for the LLM to select them.
+
+### 2. Maximise prompting time
 
 Forma's AI Agents are not 'coded', but 'configured' using `yaml`, `json` and `markdown` files. These files have all the information required for Forma's runtime to bring an AI Agent to live.
 
@@ -44,7 +49,7 @@ start:
        system_prompt: 'You are a helpful assistant'
 ```
 
-### 2. Agents should be auditable
+### 3. Agents should be auditable
 
 A Forma agent fits naturally within a standard code repository (`git`). This means that all prompts, workflows, and configurations are version-controlled and easily auditable. They can follow the same code review and quality assurance standards as the rest of your codebase. 
 
@@ -57,17 +62,17 @@ Additionally, Forma agents are defined using `yaml`, `json` and `markdown` files
 > [Forma DOES have prompt templates](../how-to/templates.md). However, the placeholders in them is reserved for values created dynamically, at runtime, by LLMs (as opposed to values known at development time).
 
 
-### 3. Evaluate often
+### 4. Evaluate often
 
 The Forma CLI has built-in evaluation support. You can test the agent as a whole, or the [sub components](./building-blocks.md) independently.
 
 This means you can test both during development, and within CI/CD pipelines.
 
-### 4. Reduce iteration time
+### 5. Reduce iteration time
 
 The Forma CLI  offers very quick hot reloading that let you iterate quickly without getting out of "the zone". These features streamline iteration and  raise errors early.
 
-### 5. Integrate it with your existing infrastructure
+### 6. Integrate it with your existing infrastructure
 
 Forma is designed on a simple principle: an AI agent is always a component in a broader system. Every production-grade service—even those powered by AI—relies on databases, logging, authentication, front-ends, and security. 
 
@@ -80,8 +85,11 @@ Therefore, rather than asking you to migrate your workflow to a new hosted platf
 
 > The drawback of this principle design is that Forma **doesn’t come with batteries included**. We know this makes it slightly harder to start and develop (e.g., local development requires running adjacent services); however, it makes it far easier to adapt, extend, and integrate with your organization’s existing systems and compliance requirements.
 
+### 7. Consistency across channels
 
-### 6. Monitor
+Forma separates the Runtime from the Agent, meaning that you can re-deploy an agent into a separate channel (e.g., website vs whatsapp) and it will operate the same.
+
+### 7. Monitor
 
 The container images we give you have built-in [Opentelemetry](https://opentelemetry.io/) instrumentation, with added [Openinference](https://arize-ai.github.io/openinference) standards ([semantic conventions](https://arize-ai.github.io/openinference/spec/semantic_conventions.html)) so you can analise your traces using [Phoenix Arize](https://phoenix.arize.com). This lets you check integrate Forma agents within your existing observability stack.
 
