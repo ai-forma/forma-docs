@@ -49,8 +49,8 @@
 - [AI Agents](./examples/agents/example-agents-intro.md)
   
 - [Client applications](./examples/clients/clients-intro.md)
-  - [Vercel AI-SDK v5](./examples/clients/vercel-aisdk-5.md)
-  - [Vercel AI-SDK v5 + DB](./examples/clients/vercel-aisdk-5-persist.md)
+  - [Vercel AI-SDK v5 - Part 1](./examples/clients/vercel-aisdk-5-setup.md)
+  - [Vercel AI-SDK v5 - Part 2](./examples/clients/vercel-aisdk-5-persist.md)
 ---
 
 # Reference Documentation

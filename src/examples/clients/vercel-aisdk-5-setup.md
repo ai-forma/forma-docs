@@ -1,7 +1,8 @@
 # Develop a front end using NextJS
 
-This project is about developing a basic chatbot ui that will interact with a Forma agent, communicating via Streaming/SSE using the [Vercel AiSDK v5](https://ai-sdk.dev/docs/ai-sdk-ui/stream-protocol).
+This page is the first of two parts which explain how to develop a basic chatbot ui that will interact with a Forma agent, communicating via Streaming/SSE using the [Vercel AiSDK v5](https://ai-sdk.dev/docs/ai-sdk-ui/stream-protocol).
 
+> Note: this part DOES NOT END with a functional chatbot. You need to complete part 2 for that.
 
 We will use the following tech stack:
 
@@ -13,17 +14,13 @@ We will use the following tech stack:
 
 ## Setting up your Forma AI Agent so respect this communication protocol
 
-In order for our Forma agent to be compatible with this chatbot, we need to set the `client.flavor` to `ai-sdk-v5`
+In order for our Forma agent to be compatible with this chatbot, we need to setup the runtime to use the `client` to `ai-sdk-v5`
 
 ```yaml
-persist_sessions: false # <-- MESSAGES STORED IN THE FRONT END
-client: 
-  flavor: ai-sdk-v5 # <-- FOR AI_SDK COMPATIBILITY
-start:
-  nodes:
-    - llm:
-        provider: ollama        
-      system_prompt: 'you are a helpful assistant'
+# runtime.yaml
+
+persist_sessions: false # <-- Keep this for now
+client: ai-sdk-v5 # <-- FOR AI_SDK COMPATIBILITY  
 ```
 
 Also, remember to setup an API Key. Add this to the `.env` file in your Forma directory:
@@ -228,7 +225,7 @@ const {
 So, with those pieces in place, I can now just render the `messages` in any way I like, and I can call the `sendMessage` function to send messages.
 
 Some things to know:
-1. By default, `sendMessage` sends the messages to the `api/chat` endpoint. We will use this default.
+1. By default, `sendMessage` sends the messages to the `api/chat` endpoint. We will keep this default.
 2. The list of `message`s is updated automatically as events are streamed from the back end.
 
 
@@ -316,16 +313,11 @@ FORMA_AGENT_KEY=fake-key-which-should-be-longer-in-production
 
 ### Run it
 
-Now, open two terminal windows, and run these two:
-
-```sh
-# Go to wherever your forma agent is
-cd <forma/path>
-# The Forma CLI
-forma serve
-```
+Now, open two terminal windows, and run the following:
 
 ```sh
 # Run the Web App you just made
 npm run dev
 ```
+
+Talking to the Forma agent will fail, as—by default—Vercel sends all the messages in the conversation to the agent. Forma does not support that as of today. To to [the next section](./vercel-aisdk-5-persist.md) to continue.
