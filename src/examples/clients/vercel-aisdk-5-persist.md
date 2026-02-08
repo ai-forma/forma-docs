@@ -1,15 +1,15 @@
 # Vercel AI-SDK v5 - With session persistence
 
-> **Note**: This guide is an optional continuation of the [other Vercel AI-SDK v5 tutorial](./vercel-aisdk-5.md). If you have not read it, it might be a good idea to go there before this one.
+> **Note**: This guide is the continuation of the [other Vercel AI-SDK v5 tutorial](./vercel-aisdk-5-setup.md). 
 
-You might have noticed that the other [other Vercel AI-SDK v5 tutorial](./vercel-aisdk-5.md), you might have noticed two things:
-1. That example keept the history of messages on the browser
-2. Every new message involves sending the whole chat history to the server for processing.
+We already mentioned that the other [other Vercel AI-SDK v5 tutorial](./vercel-aisdk-5-setup.md):
+1. Keeps the history of messages on the browser, not in the backend
+2. Sends the whole chat history to the server on every interaction
 
 While those to elements can make an AI agent cheaper (because you do not need to manage an Sessions database), they also imply that (respectively):
 
 1. **Sessions are relatively ephemeral**, and will disappear when the user refreshes the page or deletes their cookies, depending on how memory is implemented.
-2. **Every new message sends much more information**, meaning that you are consuming more data; but also, that if someone intercepts this communication, they not only get a loose message (e.g., "but why?") but the whole conversation surrounding that "but why?".
+2. **Every new message sends much more information**, meaning that you are consuming more data; but also, that if someone intercepts this communication, they not only get a loose message (e.g., "Sure, that sounds good!") but the whole conversation surrounding that specific message (e.g., they would know "what" sounds good).
 
 The solution is to keep the memory on the back-end. That way, when you send a message, the Forma Agent will first retrieve the context of the conversation (i.e., the previous messages) and then send them to the LLM. Then, before returning the answer to you, it will update the sessions database by adding the response. 
 
@@ -17,17 +17,12 @@ Let's do this.
 
 ## Setting up your Forma AI Agent so respect this communication protocol
 
-In order for our Forma agent to be compatible with this chatbot, we need to set the `client.flavor` to `ai-sdk-v5`
+In order for our Forma agent to be compatible with this chatbot, we need to tell the runtime to persist sessions
 
 ```yaml
-persist_sessions: true # <-- CHANGED
-client: 
-  flavor: ai-sdk-v5-persist # <-- CHANGED
-start:
-  nodes:
-    - llm:
-        provider: ollama        
-      system_prompt: 'you are a helpful assistant'
+# runtime.yaml
+persist_sessions: true # <-- MAYBE CHANGED
+client: ai-sdk-v5 # <-- NOT CHANGED
 ```
 
 Also, remember to setup an API Key. Add this to the `.env` file in your Forma directory:
@@ -305,7 +300,3 @@ forma serve
 # Run the Web App you just made
 npm run dev
 ```
-
-
-
-
