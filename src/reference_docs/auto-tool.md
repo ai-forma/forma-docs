@@ -20,6 +20,7 @@ tool: ToolRunner
 just_for: 
 	- string
 	- ...
+confirm_before_calling: boolean
 ```
 
 #### `name`
@@ -44,5 +45,9 @@ is selected.
 The roles that are allowed to use this tool.
 If empty, everyone is allowed to use it; if not,
 only the specific roles in here are allowed to use it.
+
+#### `confirm_before_calling`
+
+Whether the user should be asked to confirm before calling this tool.
 
 
