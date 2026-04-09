@@ -20,11 +20,19 @@ the input/output schema.
 
 ### [`sync`](./auto-openaisyncadapter.md)
 Basic service-to-service communication, with no streaming.
-Client sends an `FormaMessage`, and receives a new message back.
+Client sends an `Open AI Message`, and receives another back.
+
+This is meant to work mostly for machine-to-machine communication, where
+the client is a server, that needs to submit tasks or questions to
+a Forma Agent.
 ### [`sse`](./auto-openaisseadapter.md)
-Forma\'s Native SSE. The client sends an `FormaMessage`, and receives a
-stream of `SSEvent`s back. If session persistence is enabled, the full conversation
-will be stored/retrieved from the sessions database.
+Basic service-to-service communication, with streaming of states (not tokens).
+Client sends an `Open AI Message`, and receives updates with respect
+to tool calls and other state changes.
+
+This is meant to work mostly for machine-to-machine communication, where
+the client is a server, that needs to submit tasks or questions to
+a Forma Agent.
 ### [`ai-sdk-v5`](./auto-aisdkv5adapter.md)
 Streamed responses using Vercel\'s \'AI-SDK v5\' Server Side Events (SSE).
 Client sends a single message (the last user message) and the Forma agent
@@ -37,7 +45,7 @@ if session persistence is enabled.
 ### [`whatsapp`](./auto-whatsappadapter.md)
 Use your Forma Agent as a Webhook for a [Whatsapp Cloud API](https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform).
 
-THIS HAS NOT BEEN TESTED YET.
+THIS HAS NOT BEEN TESTED YET PROPERLY.
 
 This runtime always persist sessions.
 
@@ -48,4 +56,36 @@ This runtime always persist sessions.
 
 ### Authentication
 
+Set the following environment variables.
+
+```bash
+WHATSAPP_HOST_NUMBER_ID=123123123
+WHATSAPP_KEY=whatsapp-long-token # For authenticating with the Whatsapp API
+WHATSAPP_VERIFY_TOKEN=12321 # for verifying webhooks
+```
 #### How Whatsapp messages are translated into LLM Messages
+### [`telegram`](./auto-telegramadapter.md)
+Use your Forma Agent as a Telegram Bot webhook.
+
+This runtime always persists sessions. Each Telegram chat maps to one
+session; the chat ID is used as the user identifier.
+
+Register the webhook with Telegram once your server is reachable:
+```text
+https://api.telegram.org/bot{TOKEN}/setWebhook?url=https://your-host/v1/chat
+```
+
+### Human in the loop
+
+Human in the loop is surfaced as a message with two inline
+buttons: Accept or Reject. These can be set up through the
+`accept_button_text` and `reject_button_text` configuration
+options.
+
+### Authentication
+
+Set the following environment variables.
+
+```bash
+TELEGRAM_BOT_TOKEN=your-telegram-bot-token # the token obtained from @BotFather.
+```
