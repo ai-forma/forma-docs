@@ -32,7 +32,7 @@ They will produce the following outputs:
 2. `score` - The numerical value reflecting the quality of the evaluation, assigned as per the instructions
 3. `explanation` - A verbal explanation for the score and labels given
 
-For example:    
+For example:
 
 > Your job is to judge whether this sentence:
 >
@@ -45,7 +45,7 @@ For example:
 > and (2), whether contradicts this reference answer:
 >
 > {{expected_output}}
->  
+>
 > Give it a score between 0 and 2 (one point for each
 > criteria), explain your reasoning behind the score,
 > and indicate whether it is Horrible (0 points), Bad (1 point)
