@@ -62,6 +62,7 @@
 	- [OpenAISSEAdapter](./reference_docs/auto-openaisseadapter.md)
 	- [AiSdkV5Adapter](./reference_docs/auto-aisdkv5adapter.md)
 	- [WhatsappAdapter](./reference_docs/auto-whatsappadapter.md)
+	- [TelegramAdapter](./reference_docs/auto-telegramadapter.md)
 - [GenaiClient](./reference_docs/auto-genaiclient.md)
 	- [Ollama](./reference_docs/auto-ollama.md)
 	- [OpenaiV1](./reference_docs/auto-openaiv1.md)
