@@ -8,6 +8,13 @@ tools should be called. It always does the same thing:
 2. **Tools (optional)** – If the LLM decided that one of its available tools would be useful to comply with the client\'s request, the node will call them.
 3. **Summarisation** – If tools were invoked, the node will call an LLM again, in order to respond to the client appropriately, with the new information provided by the tools. (**Note**: This can be skipped if only a single tool is called, and such tool is marked as `not-summarize`. This is useful in many situations, as will be explained in the [Tools](tools.md) section)
 
+**Load time checks**
+
+- ID is well-formed
+- Tools are all well formed
+- It does not have output format AND tools simultaneously
+- Does not have summarization prompt or summarization LLM if it does not have tools
+
 
 ## Full Specification
 
@@ -29,6 +36,7 @@ triage_evals:
 summarize_evals: 
 	- Eval
 	- ...
+output_format: TemplateField # optional
 ```
 
 #### `id`
@@ -72,5 +80,17 @@ The evaluations used to test the triage LLM specifically
 #### `summarize_evals`
 
 The evaluations used to test the summarize LLM specifically
+
+#### `output_format` (*optional*)
+
+An optional output schema for the node.
+
+A node that has tools cannot have output format. If you want
+to combine tool calling and output format, you should
+chain two nodes (one with the tools and the next with
+the output schema)
+
+Internally, the output schema will be assigned to the node\'s
+LLM.
 
 
