@@ -20,3 +20,7 @@ template
 ### [`workflow`](./auto-workflowtool.md)
 Runs a workflow as if it was a tool, using a fresh
 state (i.e., does not receive the whole conversation)
+### [`api-call`](./auto-apicall.md)
+Makes an HTTP REST API call. The LLM fills in URL path parameters
+and request body fields based on their schemas. Use `$VAR` in
+header values to reference environment variables for secrets.
