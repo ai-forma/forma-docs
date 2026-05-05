@@ -74,4 +74,5 @@
 - [ToolRunner](./reference_docs/auto-toolrunner.md)
 	- [TemplateTool](./reference_docs/auto-templatetool.md)
 	- [WorkflowTool](./reference_docs/auto-workflowtool.md)
+	- [ApiCall](./reference_docs/auto-apicall.md)
 - [Workflow](./reference_docs/auto-workflow.md)
