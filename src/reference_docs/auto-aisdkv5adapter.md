@@ -1,6 +1,15 @@
 # AiSdkV5Adapter
 
-Offers a single endpoint, with an SSE Completion
+Meant to be called from the Vercel AI SDK v5-compatible client.
+
+It offers 3 basic endpoints:
+- `v1/init` to initiate a session
+- `v1/chat` to send a message and get a streamed response
+- `v1/resume` to resume a session
+
+Note that `v1/resume` does not use SSE streaming, but a synchronous response.
+This is due to some issues we found when trying to incorporate v6 and human-in-the-loop
+capabilities. [Issue here (not by us)](https://github.com/vercel/ai/issues/9980)
 
 
 ## Full Specification
