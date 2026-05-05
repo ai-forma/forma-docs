@@ -39,9 +39,14 @@ Client sends a single message (the last user message) and the Forma agent
 will take care of retrieving the full conversation from the sessions database,
 if session persistence is enabled.
 
-> Note: This is NOT the normal behaviour. The default behaviour
-> of the Vercel AI SDK v 5 is to send the whole conversation
-> on every interaction. Forma does not favour this behaviour.
+Note that sending only the last message is NOT AiSDK\'s normal behaviour.
+The default behaviour of the Vercel AI SDK v5 is to send the whole conversation
+on every interaction. Forma does not favour this behaviour.
+
+> Note: In trying to add compatibility with v6\'s Human in the loop,
+> we noticed that Vercel\'s docs seem inconsistent or out of date.
+> Therefore, human-in-the-loop compatibility is implemented without
+> streaming.
 ### [`whatsapp`](./auto-whatsappadapter.md)
 Use your Forma Agent as a Webhook for a [Whatsapp Cloud API](https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform).
 
